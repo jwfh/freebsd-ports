@@ -43,6 +43,7 @@ OPTIONS_DEFINE=	DOCS
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/i3lock
 	${RM} ${STAGEDIR}${PREFIX}/etc/pam.d/i3lock
+	${CHMOD} u+s ${STAGEDIR}${PREFIX}/bin/i3lock
 
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
