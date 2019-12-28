@@ -1,0 +1,19 @@
+From the i3lock pkg-descr:
+
+    i3lock improves slock by making it fork() and therefore combinable with
+    commands to suspend your computer. Additionally, instead of turning off
+    your screen via DPMS and/or displaying a black screen, i3lock displays
+    a white screen so you can see if your computer failed to resume from
+    suspend or if your screen is just locked. Also, when entering a wrong
+    password, i3lock does not call XBell(). This is important because
+    i3lock/slock think you have entered a password when resuming from
+    suspend, at least sometimes.
+
+    i3lock was forked from slock-0.9
+
+i3lock-color forks i3lock and adds support for color options for verification
+ring, backspace highlight color, key highlight color, etc., blurring the
+current screen and using that as the lock background, showing a clock in the
+indicator, and more.
+
+WWW: https://github.com/PandorasFox/i3lock-color
