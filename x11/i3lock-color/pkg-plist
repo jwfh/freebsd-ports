@@ -1,4 +1,4 @@
-bin/i3lock
+@(,,4755) bin/i3lock
 man/man1/i3lock.1.gz
 %%PORTDOCS%%%%DOCSDIR%%/CHANGELOG
 %%PORTDOCS%%%%DOCSDIR%%/README.md
