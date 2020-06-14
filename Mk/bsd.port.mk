@@ -3614,7 +3614,7 @@ security-check: ${TMPPLIST}
 	' ${TMPPLIST} > ${WRKDIR}/.PLIST.flattened; \
 	${TR} '\n' '\0' < ${WRKDIR}/.PLIST.flattened \
 	| ${XARGS} -0 -J % ${FIND} % -prune ! -type l -type f \( -perm -4000 -o -perm -2000 \) \( -perm -0010 -o -perm -0001 \) 2> /dev/null > ${WRKDIR}/.PLIST.setuid; \
-	${SED} -n -E -e '/^@\(([^,)]*,){2} *[246][0-7]([135][0-7]|[0-7][135]) *\)/ s/^@\([^)]*\) *//p' < ${TMPPLIST} >> ${WRKDIR}/.PLIST.setuid; \
+	${SED} -n -E -e '/^@\(([^,)]*,){2}[246][0-7]([135][0-7]|[0-7][135])\)/ s/^@\([^)]*\) *//p' < ${TMPPLIST} >> ${WRKDIR}/.PLIST.setuid; \
 	${TR} '\n' '\0' < ${WRKDIR}/.PLIST.flattened \
 	| ${XARGS} -0 -J % ${FIND} % -prune -perm -0002 \! -type l 2> /dev/null > ${WRKDIR}/.PLIST.writable; \
 	${TR} '\n' '\0' < ${WRKDIR}/.PLIST.flattened \
